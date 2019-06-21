@@ -12,8 +12,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List _imageUrl = [
     'http://img.zcool.cn/community/01ce8b582439aea84a0e282ba855d9.jpg',
-    'http://img.zcool.cn/community/01f2ac576df0980000018c1b1cb5e1.jpg',
-    'http://img.zcool.cn/community/01f0305541db6800000115417f56ae.jpg@1280w_1l_2o_100sh.jpg'
+    'http://img.zcool.cn/community/01ce8b582439aea84a0e282ba855d9.jpg',
+    'http://img.zcool.cn/community/01ce8b582439aea84a0e282ba855d9.jpg'
   ];
 
   double appBarAlpha = 0;
@@ -55,12 +55,20 @@ class _HomePageState extends State<HomePage> {
                         pagination: SwiperPagination(),
                       ),
                     ),
+                    // 页面跳转
+                    Container(
+                      height: 100,
+                      color: Colors.red,
+                      child: FlatButton(
+                        onPressed: () =>
+                            {Navigator.of(context).pushNamed('/searchpage')},
+                        child: Text("跳转搜索页"),
+                      ),
+                    ),
                     Container(
                       height: 800,
-                      child: ListTile(
-                        title: Text('哈哈'),
-                      ),
-                    )
+                      child: Text('哈哈'),
+                    ),
                   ],
                 ))),
         // 改变透明度
