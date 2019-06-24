@@ -20,8 +20,20 @@ class _MyPageState extends State<MyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(dataShared),
-      ),
+          child: Container(
+              margin: EdgeInsets.all(50),
+              child: Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: () =>
+                          {Navigator.pushNamed(context, '/demopage')},
+                      child: Text(dataShared)),
+                  FlatButton(
+                      onPressed: () =>
+                          {Navigator.pushNamed(context, '/demosppage')},
+                      child: Text('demosppage')),
+                ],
+              ))),
     );
   }
 

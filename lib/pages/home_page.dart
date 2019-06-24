@@ -100,6 +100,6 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       appBarAlpha = alpha;
     });
-    print(alpha);
+//    print(alpha);
   }
 }
